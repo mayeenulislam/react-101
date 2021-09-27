@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>React 101: React Components 101</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="app"></div>
+
+	<!-- Using React -->
+	<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+	<!-- React Components with ES6+ (ECMAScript 6+) -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/babel">
+		/**
+		 * Component 1: Header.
+		 */
+		function Header() {
+			return (
+				<header id="header" className="page-header">
+					Header Modified
+				</header>
+			)
+		}
+
+		/**
+		 * Component 2: Article.
+		 */
+		function Article() {
+			return (
+				<article>
+					Article 1
+				</article>
+			)
+		}
+
+		/**
+		 * Component 3: Sidebar.
+		 */
+		function Sidebar() {
+			return (
+				<aside>
+					Sidebar
+				</aside>
+			)
+		}
+		
+		/**
+		 * Component 4: Footer.
+		 */
+		function Footer() {
+			return (
+				<footer>
+					Footer
+				</footer>
+			)
+		}
+
+		let app = document.getElementById('app');
+		ReactDOM.render((
+			<React.Fragment>
+				<Header/>
+				<Article/>
+				<Article/> {/* Lost the second article here :( */}
+				<Sidebar/>
+				<Footer/>
+			</React.Fragment>
+		), app);
+	</script>
+
+	<!-- 2. Using React with ES6+ (ECMAScript 6+) -->
+	<!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/babel">
+		let app = document.getElementById('app');
+		ReactDOM.render((
+			<React.Fragment>
+				<header id="header" className="page-header">
+					Header Modified
+				</header>
+				<article>
+					Article 1
+				</article>
+				<article>
+					Article 2
+				</article>
+				<aside>
+					Sidebar
+				</aside>
+				<footer>
+					Footer
+				</footer>
+			</React.Fragment>
+		), app);
+	</script> -->
+
+	<!-- 1. Using React with ES6+ (ECMAScript 6+) -->
+	<!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/babel">
+		let app = document.getElementById('app');
+		ReactDOM.render('Hello', app);
+	</script> -->
+
+	<!-- Using React with Vanilla Javascript (ES5 and lower) -->
+	<!-- <script>
+		var app = document.getElementById('app');
+		ReactDOM.render('Hello', app);
+	</script> -->
+</body>
+</html>

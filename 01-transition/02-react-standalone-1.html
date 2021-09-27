@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>React 101: Transition to React</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="app"></div>
+
+	<!-- Using React -->
+	<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+	<!-- Using React with Vanilla Javascript (ES5 and lower) -->
+	<script>
+		var app = document.getElementById('app');
+		ReactDOM.render('Hello', app);
+	</script>
+
+	<!-- 1. Using React with ES6+ (ECMAScript 6+) -->
+	<!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/babel">
+		let app = document.getElementById('app');
+		ReactDOM.render('Hello', app);
+	</script> -->
+
+	<!-- 2. Using React with ES6+ (ECMAScript 6+) -->
+	<!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/babel">
+		let app = document.getElementById('app');
+		ReactDOM.render((
+			<React.Fragment>
+				<header id="header" className="page-header">
+					Header Modified
+				</header>
+				<article>
+					Article 1
+				</article>
+				<article>
+					Article 2
+				</article>
+				<aside>
+					Sidebar
+				</aside>
+				<footer>
+					Footer
+				</footer>
+			</React.Fragment>
+		), app);
+	</script> -->
+
+	<!-- ----------------------------------------------------------------- -->
+	
+	<!-- Using Javascript -->
+	<!-- <script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			console.log('DOM fully loaded and parsed');
+			document.getElementById('header').innerText = 'Header Modified';
+		});
+	</script> -->
+	
+	<!-- Using jQuery -->
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		jQuery(function($) {
+			console.log('DOM fully loaded and parsed');
+			$('#header').text('Header Modified');
+		});
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>React 101: HTML with Legacy JavaScript</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<header id="header" class="page-header">
+			Header
+		</header>
+		<article>
+			Article 1
+		</article>
+		<article>
+			Article 2
+		</article>
+		<aside>
+			Sidebar
+		</aside>
+		<footer>
+			Footer
+		</footer>
+	</main>
+	
+	<!-- Using Javascript -->
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			console.log('DOM fully loaded and parsed');
+			document.getElementById('header').innerText = 'Header Modified';
+		});
+	</script>
+
+	<!-- Using jQuery -->
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		jQuery(function($) {
+			console.log('DOM fully loaded and parsed');
+			$('#header').text('Header Modified');
+		});
+	</script> -->
+</body>
+</html>
